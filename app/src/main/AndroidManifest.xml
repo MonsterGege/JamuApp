@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jamuně">
-        <activity android:name=".DetailJamu"></activity>
+        <activity android:name=".detail_jamu"></activity>
         <activity android:name=".Notifications" />
         <activity android:name=".ListJamu" />
         <activity android:name=".MainActivity">

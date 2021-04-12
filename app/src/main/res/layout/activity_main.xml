@@ -29,29 +29,34 @@
         </LinearLayout>
             <LinearLayout
                 android:layout_gravity="center"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:text="All Recipe"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:text="Today"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:text="Categories"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:text="Favourite"/>
+                <com.google.android.material.tabs.TabLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:layout_marginTop="20dp"
+                    app:tabIndicatorColor="#808080"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabIndicatorAnimationMode="elastic"
+                    app:tabSelectedTextColor="#808080"
+                    app:tabTextAppearance="@style/MyCustomTextAppearance"
+                    >
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All Recipes" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categories" />
+
+                </com.google.android.material.tabs.TabLayout>
             </LinearLayout>
         <ScrollView
             android:layout_width="match_parent"
