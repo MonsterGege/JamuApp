@@ -15,8 +15,8 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main)
 
 
-        title = findViewById(R.id.jdl)
-        ket = findViewById(R.id.keterangan)
+       // title = findViewById(R.id.jdl)
+       // ket = findViewById(R.id.keterangan)
 
     }
 }
