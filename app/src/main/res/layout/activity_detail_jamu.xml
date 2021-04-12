@@ -164,7 +164,7 @@
         android:src="@drawable/back_icon"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
-        android:background=""
+        android:background="#00FFFFFF"
         />
 
 
