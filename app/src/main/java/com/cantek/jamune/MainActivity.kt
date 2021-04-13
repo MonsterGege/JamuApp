@@ -1,22 +1,21 @@
 package com.cantek.jamune
 
-import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : Activity() {
-    private lateinit var title: TextView
-    private lateinit var ket: TextView
-    private lateinit var img: ImageView
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setUdapter();
 
+    }
 
-       // title = findViewById(R.id.jdl)
-       // ket = findViewById(R.id.keterangan)
-
+    private fun setUdapter() {
+        val pager = MainAdapter(supportFragmentManager)
+        pager.addFragment(list(),"")
+        pager.addFragment(category(),"")
+        viewPager.adapter = pager
+        tabs.setupWithViewPager(viewPager)
     }
 }

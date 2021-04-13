@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_weight="0"
@@ -46,7 +47,6 @@
                     app:tabSelectedTextColor="#808080"
                     app:tabTextAppearance="@style/MyCustomTextAppearance"
                     >
-
                     <com.google.android.material.tabs.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -58,6 +58,10 @@
                         android:text="Categories" />
 
                 </com.google.android.material.tabs.TabLayout>
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
     </LinearLayout>
 
