@@ -24,12 +24,12 @@
             android:id="@+id/one"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:background="@drawable/rounded" />
+            android:background="@drawable/kunyit" />
         <ImageView
             android:id="@+id/two"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:background="@drawable/rounded"
+            android:background="@drawable/jahe"
             android:scaleType="centerCrop"
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/one"
@@ -38,21 +38,14 @@
             android:id="@+id/three"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:background="@drawable/rounded"
+            android:background="@drawable/kencur"
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/two" />
         <ImageView
             android:id="@+id/four"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:background="@drawable/rounded"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/three"
-            />
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/rounded"
+            android:background="@drawable/temulawakk"
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/three"
             />
@@ -71,32 +64,65 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp">
-        <ImageView
+
+        <TextView
             android:id="@+id/five"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded" />
-        <ImageView
+            android:background="@drawable/rounded"
+            android:backgroundTint="#f05529"
+            android:textColor="@color/white"
+            android:fontFamily="@font/abril_fatface"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:text="Masuk Angin"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat" />
+        <TextView
             android:id="@+id/six"
+            android:text="Pegal-Pegal"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/abril_fatface"
+            android:textSize="15sp"
+            android:backgroundTint="#097150"
             android:background="@drawable/rounded"
-            android:layout_below="@id/five"/>
-        <ImageView
+            android:layout_below="@id/five"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat"/>
+        <TextView
             android:id="@+id/seven"
+            android:text="Stamina"
+            android:backgroundTint="#f58850"
             android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/abril_fatface"
+            android:textSize="15sp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded"
-            android:layout_below="@id/six"/>
-        <ImageView
+            android:layout_below="@id/six"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat"/>
+        <TextView
             android:id="@+id/eight"
+            android:text="Daya Tahan Tubuh"
+            android:backgroundTint="#146f77"
+            android:textColor="@color/white"
+            android:fontFamily="@font/abril_fatface"
+            android:textSize="15sp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded"
-            android:layout_below="@id/seven"/>
+            android:layout_below="@id/seven"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat"/>
 
 
 
