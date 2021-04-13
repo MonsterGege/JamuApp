@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".detail_jamu"
+    tools:context=".DetailJamu"
     android:fillViewport="true"
     >
 
@@ -26,7 +26,6 @@
             android:src="@drawable/jamu"
             android:scaleType="centerCrop"
             android:layout_gravity="center"
-
             />
 
 
