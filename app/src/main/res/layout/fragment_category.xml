@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".category">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bahan Baku"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/one"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded" />
+        <ImageView
+            android:id="@+id/two"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/one"
+            />
+        <ImageView
+            android:id="@+id/three"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/two" />
+        <ImageView
+            android:id="@+id/four"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/three"
+            />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/three"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khasiat"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+        <ImageView
+            android:id="@+id/five"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded" />
+        <ImageView
+            android:id="@+id/six"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded"
+            android:layout_below="@id/five"/>
+        <ImageView
+            android:id="@+id/seven"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded"
+            android:layout_below="@id/six"/>
+        <ImageView
+            android:id="@+id/eight"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded"
+            android:layout_below="@id/seven"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

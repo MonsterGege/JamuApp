@@ -15,7 +15,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
             <SearchView
                 android:layout_width="291dp"
                 android:layout_height="wrap_content"
@@ -24,7 +25,7 @@
                 android:layout_width="@dimen/size_35"
                 android:layout_height="@dimen/size_35"
                 android:layout_marginTop="@dimen/size_12"
-                android:layout_marginLeft="@dimen/size_45"
+                android:layout_marginLeft="@dimen/size_35"
                 android:src="@drawable/ic_notif"/>
         </LinearLayout>
             <LinearLayout
@@ -58,14 +59,6 @@
 
                 </com.google.android.material.tabs.TabLayout>
             </LinearLayout>
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
-            android:layout_width="match_parent"
-            android:layout_height="281dp" />
-        </ScrollView>
     </LinearLayout>
+
 </RelativeLayout>
