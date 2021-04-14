@@ -187,7 +187,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
-                    android:backgroundTint="#c8c8c8"
+                    android:backgroundTint="#bad5a1"
                     android:paddingVertical="6dp"
                     android:paddingHorizontal="12dp"
                     android:gravity="center_vertical"
@@ -205,7 +205,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
-                    android:backgroundTint="#c8c8c8"
+                    android:backgroundTint="#bad5a1"
                     android:paddingVertical="6dp"
                     android:paddingHorizontal="12dp"
                     android:gravity="center_vertical"
@@ -223,7 +223,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
-                    android:backgroundTint="#c8c8c8"
+                    android:backgroundTint="#bad5a1"
                     android:paddingVertical="6dp"
                     android:paddingHorizontal="12dp"
                     android:gravity="center_vertical"
@@ -235,7 +235,7 @@
                     android:layout_marginRight="8dp"/>
 
                 <TextView
-                    android:backgroundTint="#c8c8c8"
+                    android:backgroundTint="#bad5a1"
                     android:id="@+id/eight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
