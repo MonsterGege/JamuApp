@@ -22,7 +22,7 @@ class ReceipeMainAdapter(private val recipe: List<Receipe>): RecyclerView.Adapte
     override fun getItemCount(): Int = recipe.size
 
     override fun onBindViewHolder(holder: ReceipeMainAdapter.MyViewHoleder, position: Int) {
-
+        holder.bindrecipe(recipe[position])
     }
 
     class MyViewHoleder(view:View): RecyclerView.ViewHolder(view) {
