@@ -13,7 +13,7 @@
         android:text="Bahan Baku"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:textColor="#808080"
+        android:textColor="#333333"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="50dp"
         />
@@ -34,13 +34,15 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     app:cardCornerRadius="15dp"
+                    android:clickable="true"
                     >
 
                     <ImageView
                         android:id="@+id/one"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:scaleType="centerCrop"
+                        android:scaleType="fitStart"
+                        android:background="#ccd5ae"
                         android:src="@drawable/kunyit" />
 
                     <TextView
@@ -49,14 +51,11 @@
                         android:layout_gravity="bottom|center_horizontal"
                         android:layout_marginBottom="6dp"
                         android:text="Kunyit"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold" />
+                        android:textColor="@color/bahan_baku"
+                        android:textStyle="bold"
+                        />
 
                 </androidx.cardview.widget.CardView>
-
-
-
-
 
         </RelativeLayout>
 
@@ -69,14 +68,16 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 app:cardCornerRadius="15dp"
+                android:clickable="true"
                 >
 
                 <ImageView
                     android:id="@+id/two"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:background="@drawable/jahe"
-                    android:scaleType="centerCrop" />
+                    android:src="@drawable/jahe"
+                    android:background="#faedcd"
+                    android:scaleType="fitStart" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -84,7 +85,7 @@
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="6dp"
                     android:text="Jahe"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/bahan_baku"
                     android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
@@ -98,13 +99,16 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                android:clickable="true"
+                >
 
                 <ImageView
                     android:id="@+id/three"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:background="@drawable/kencur"
+                    android:src="@drawable/kencur"
+                    android:background="#ddb892"
                     android:scaleType="centerCrop" />
 
                 <TextView
@@ -114,7 +118,7 @@
                     android:layout_marginBottom="6dp"
                     android:text="Kencur"
                     android:textStyle="bold"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/bahan_baku"
                     />
 
             </androidx.cardview.widget.CardView>
@@ -129,15 +133,16 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 app:cardCornerRadius="15dp"
-
+                android:clickable="true"
                 >
 
                 <ImageView
                     android:id="@+id/four"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:background="@drawable/temulawak"
-                    android:scaleType="centerCrop" />
+                    android:src="@drawable/temulawak"
+                    android:background="#f5cac3"
+                    android:scaleType="fitStart" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -145,7 +150,7 @@
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="6dp"
                     android:text="Temulawak"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/bahan_baku"
                     android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
@@ -159,79 +164,107 @@
         android:text="Khasiat"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:textColor="#808080"
+        android:textColor="#333333"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         />
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:backgroundTint="#c8c8c8"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="12dp"
+                    android:gravity="center_vertical"
+                    android:text="Masuk Angin"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    tools:ignore="RtlCompat"
+                    android:layout_marginRight="8dp"
+                    android:clickable="true"
+                    />
+
+                <TextView
+                    android:id="@+id/six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:backgroundTint="#c8c8c8"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="12dp"
+                    android:gravity="center_vertical"
+                    android:text="Pegal-pegal"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    tools:ignore="RtlCompat"
+                    android:layout_marginRight="8dp"
+                    android:clickable="true"
+                    />
+
+                <TextView
+                    android:id="@+id/seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:backgroundTint="#c8c8c8"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="12dp"
+                    android:gravity="center_vertical"
+                    android:text="Stamina"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    tools:ignore="RtlCompat"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:backgroundTint="#c8c8c8"
+                    android:id="@+id/eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="12dp"
+                    android:gravity="center_vertical"
+                    android:text="Daya Tahan Tubuh"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    tools:ignore="RtlCompat"
+                    android:layout_marginRight="8dp"
+                    android:clickable="true"
+                    />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp">
 
-        <TextView
-            android:id="@+id/five"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/rounded"
-            android:backgroundTint="#f05529"
-            android:textColor="@color/white"
-            android:fontFamily="@font/abril_fatface"
-            android:textSize="15sp"
-            android:gravity="center_vertical"
-            android:text="Masuk Angin"
-            android:textAlignment="center"
-            tools:ignore="RtlCompat" />
-        <TextView
-            android:id="@+id/six"
-            android:text="Pegal-Pegal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/abril_fatface"
-            android:textSize="15sp"
-            android:backgroundTint="#097150"
-            android:background="@drawable/rounded"
-            android:layout_below="@id/five"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            tools:ignore="RtlCompat"/>
-        <TextView
-            android:id="@+id/seven"
-            android:text="Stamina"
-            android:backgroundTint="#f58850"
-            android:layout_width="match_parent"
-            android:textColor="@color/white"
-            android:fontFamily="@font/abril_fatface"
-            android:textSize="15sp"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/rounded"
-            android:layout_below="@id/six"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            tools:ignore="RtlCompat"/>
-        <TextView
-            android:id="@+id/eight"
-            android:text="Daya Tahan Tubuh"
-            android:backgroundTint="#146f77"
-            android:textColor="@color/white"
-            android:fontFamily="@font/abril_fatface"
-            android:textSize="15sp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/rounded"
-            android:layout_below="@id/seven"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            tools:ignore="RtlCompat"/>
 
 
 
     </RelativeLayout>
-
-
 
 
 </LinearLayout>
