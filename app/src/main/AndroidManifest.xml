@@ -7,6 +7,8 @@
         android:icon="@drawable/ic_icon_app"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
         android:theme="@style/splashScreenCustom">
         <activity android:name=".DetailKategori"></activity>
         <activity android:name=".Notifications" />

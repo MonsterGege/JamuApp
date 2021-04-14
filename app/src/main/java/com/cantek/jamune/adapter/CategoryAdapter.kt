@@ -11,9 +11,9 @@ import kotlinx.android.synthetic.main.listjamu.view.*
 
 class CategoryAdapter(context: Context,private val recipe: List<Receipe>): RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        private val  img = view.img
-        private val  jdl = view.jdl
-        private val  keterangan = view.keterangan
+        private val  img = view.item_image
+        private val  jdl = view.item_judul
+        private val  keterangan = view.item_keterangan
         fun bindrecipe(recipes: Receipe){
             // Pakai Image Slider
             jdl.text = recipes.judul

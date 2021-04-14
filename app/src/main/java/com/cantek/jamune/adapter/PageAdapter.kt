@@ -1,17 +1,22 @@
 package com.cantek.jamune.adapter
 
+import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.cantek.jamune.Category
 import com.cantek.jamune.List
 
-class PageAdapter(fm: FragmentManager): FragmentPagerAdapter(fm) {
+class PageAdapter(context: Context ,fm: FragmentManager): FragmentPagerAdapter(fm) {
+    lateinit var konteks: Context
+    init {
+        konteks = context
+    }
     override fun getItem(position: Int): Fragment {
         when(position) {
-            0 -> return List()
+            0 -> return List(konteks)
             1 -> return Category()
-            else -> return List()
+            else -> return List(konteks)
         }
     }
 
