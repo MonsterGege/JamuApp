@@ -22,7 +22,7 @@
         android:layout_gravity="end"
         android:orientation="horizontal">
         <SearchView
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/size_180"
             android:layout_height="@dimen/text_24"
             android:layoutDirection="rtl"
             android:searchIcon="@drawable/ic_search_white"

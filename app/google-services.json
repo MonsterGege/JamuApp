@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "194490222911",
+    "firebase_url": "https://jamune-67b20-default-rtdb.firebaseio.com",
+    "project_id": "jamune-67b20",
+    "storage_bucket": "jamune-67b20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194490222911:android:4794b4d7102ee32d9e2b8a",
+        "android_client_info": {
+          "package_name": "com.cantek.jamune"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194490222911-b9drd41086lpsoqd45oqal8pfbvb47b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpv7kvgTce4kLoPyQj1iSB3t6L8_xMC0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194490222911-b9drd41086lpsoqd45oqal8pfbvb47b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

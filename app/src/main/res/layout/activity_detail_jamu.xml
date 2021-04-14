@@ -22,7 +22,6 @@
             app:hideIndicators="true"
             app:loopSlides="true"
             android:layout_marginTop="-60dp"
-            android:src="@drawable/jamu"
             android:scaleType="centerCrop"
             android:layout_gravity="center"
             />
