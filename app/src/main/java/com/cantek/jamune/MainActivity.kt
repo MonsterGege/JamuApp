@@ -12,6 +12,7 @@ import com.google.android.material.tabs.TabLayout
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_Jamune)
         setContentView(R.layout.activity_main)
         val tabLayout: TabLayout = findViewById(R.id.tabs)
         val viewPager: ViewPager = findViewById(R.id.main_view_pager)
