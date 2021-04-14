@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".DetailJamu"
-    android:fillViewport="true"
-    >
+    android:fillViewport="true">
 
 
     <LinearLayout
@@ -56,9 +55,7 @@
                     android:text="NamaJamu"
                     android:textColor="@color/font_gelap"
                     android:textSize="18dp"
-                    android:textStyle="bold"
-
-                    />
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/keterangan"
@@ -67,14 +64,12 @@
                     android:layout_height="wrap_content"
                     android:text="Keterangan Jamu"
                     android:layout_marginBottom="6dp"
-                    android:textColor="#808080"
-                    />
+                    android:textColor="#808080"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
 
                     <ImageView
@@ -83,10 +78,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0"
                         android:layout_marginLeft="-14dp"
-                        android:src="@drawable/time"
-
-
-                        />
+                        android:src="@drawable/time"/>
 
                     <TextView
                         android:id="@+id/time"
@@ -96,9 +88,7 @@
                         android:hint="Time"
                         android:layout_marginLeft="-10dp"
                         android:textColor="#808080"
-                        android:layout_weight="3"
-
-                        />
+                        android:layout_weight="3"/>
 
                     <TextView
                         android:id="@+id/portion"
@@ -107,8 +97,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:hint="Portion"
-                        android:textColor="#808080"
-                        />
+                        android:textColor="#808080"/>
 
 
                 </LinearLayout>

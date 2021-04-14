@@ -1,21 +1,22 @@
 package com.cantek.jamune
 
-import kotlinx.android.synthetic.main.activity_main.*
+import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.viewpager.widget.ViewPager
+import com.cantek.jamune.adapter.PageAdapter
+import com.google.android.material.tabs.TabItem
+import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setUdapter();
+        setContentView(R.layout.activity_main)
+        val tabLayout: TabLayout = findViewById(R.id.tabs)
+        val viewPager: ViewPager = findViewById(R.id.main_view_pager)
 
-    }
-
-    private fun setUdapter() {
-        val pager = MainAdapter(supportFragmentManager)
-        pager.addFragment(list(),"")
-        pager.addFragment(category(),"")
-        viewPager.adapter = pager
-        tabs.setupWithViewPager(viewPager)
+        viewPager.adapter = PageAdapter(supportFragmentManager)
+        tabLayout.setupWithViewPager(viewPager)
     }
 }
