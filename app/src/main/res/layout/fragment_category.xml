@@ -15,44 +15,141 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="50dp"
         />
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_margin="20dp">
+        android:layout_margin="20dp"
 
-        <ImageView
-            android:id="@+id/one"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/kunyit" />
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/frame1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+
+                <ImageView
+                    android:id="@+id/one"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/kunyit"
+                    android:scaleType="centerCrop"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="6dp"
+                    android:text="Kunyit"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
 
 
-        <ImageView
-            android:id="@+id/two"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/jahe"
-            android:scaleType="centerCrop"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/one"
-            />
-        <ImageView
-            android:id="@+id/three"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/kencur"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/two" />
-        <ImageView
-            android:id="@+id/four"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/temulawak"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/three"
-            />
-    </RelativeLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/frame2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+
+                <ImageView
+                    android:id="@+id/two"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/jahe"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="6dp"
+                    android:text="Jahe"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/frame3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+
+                <ImageView
+                    android:id="@+id/three"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/kencur"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="6dp"
+                    android:text="Kencur"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    />
+
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0">
+
+            <FrameLayout
+                android:id="@+id/frame4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+
+                >
+
+                <ImageView
+                    android:id="@+id/four"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/temulawak"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="6dp"
+                    android:text="Temulawak"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
