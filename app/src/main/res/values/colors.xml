@@ -25,6 +25,6 @@
     <color name="dark">#353755</color>
     <color name="green_toscha">#5BD3C7</color>
 
-    <color name="font_under_gelap">#457b9d</color>
-    <color name="font_gelap">#38756e</color>
+    <color name="transparan">#00FFFFFF</color>
+
 </resources>
