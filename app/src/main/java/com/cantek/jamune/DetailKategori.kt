@@ -61,7 +61,7 @@ class DetailKategori : AppCompatActivity() {
 
                     }
                     rvJamu.layoutManager = LinearLayoutManager(this@DetailKategori)
-                    val categoryAdapter = CategoryAdapter(CatRecipe)
+                    val categoryAdapter = CategoryAdapter(this@DetailKategori,CatRecipe)
                     rvJamu.adapter = categoryAdapter
 
 
