@@ -5,12 +5,16 @@ import android.os.Bundle
 import android.widget.MediaController
 import com.cantek.jamune.model.Receipe
 import com.google.firebase.database.*
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 import kotlinx.android.synthetic.main.activity_detail_jamu.*
 
 class DetailJamu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_jamu)
+
 
         val key = intent.getStringExtra("item-key")
 
@@ -41,30 +45,34 @@ class DetailJamu : AppCompatActivity() {
                         val cara: String = item.child("cara").value.toString()
                         val khasiat = kasiat.joinToString(separator = ",")
                         val bahans = bahan.joinToString(separator = ",")
-
-                        val vid: String = item.child("video").value as String
-                            detail_judul.setText(jdl)
-                            detail_keterangan.setText(keterangan)
-                            detail_khasiat.setText(khasiat)
-                            detail_bahan.setText(bahans)
-                            detail_cara.setText(cara)
-                            //Video Belom bisa
-                            detail_video.setVideoPath("https://www.youtube.com/watch?v="+vid)
-                           val mediaController = MediaController(this@DetailJamu)
-                            mediaController.setAnchorView(detail_video)
-                            detail_video.setMediaController(mediaController)
-
-                            detail_video.setOnCompletionListener { mediaPlayer ->
-                                mediaPlayer.isLooping = true
-                            }
-                            detail_video.start()
-
+                         val vid: String = item.child("video").value as String
+                        detail_judul.setText(jdl)
+                        detail_keterangan.setText(keterangan)
+                        detail_khasiat.setText(khasiat)
+                        detail_bahan.setText(bahans)
+                        detail_cara.setText(cara)
+                        youtube(vid)
                         }
                     }
                 }
 
 
+
+                println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<${allReceipe.size} >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+
             }
+
+        })
+    }
+
+    fun youtube(ytb:String){
+        lifecycle.addObserver(playYoutube)
+        playYoutube.addYouTubePlayerListener(object : AbstractYouTubePlayerListener(){
+            override fun onReady(youTubePlayer: YouTubePlayer) {
+                super.onReady(youTubePlayer)
+                youTubePlayer.cueVideo(ytb,0F).toString()
+            }
+
         })
     }
 }

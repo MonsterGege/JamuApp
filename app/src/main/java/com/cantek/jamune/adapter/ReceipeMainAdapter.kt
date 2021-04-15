@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.cantek.jamune.DetailJamu
 import com.cantek.jamune.R
 import com.cantek.jamune.model.Receipe
@@ -38,7 +40,9 @@ class ReceipeMainAdapter(context: Context, private val recipe: List<Receipe>): R
         private val  keterangan = view.item_keterangan
         private val click = view.click
 
+
         fun bindrecipe(contex: Context, recipes: Receipe){
+
             Glide.with(contex).load(recipes.image).into(img)
             jdl.text = recipes.judul
             keterangan.text = recipes.deskripsi
