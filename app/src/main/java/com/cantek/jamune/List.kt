@@ -38,6 +38,7 @@ class List(context: Context) : Fragment(R.layout.fragment_list) {
                         }
 
                         allReceipe.add(Receipe(
+                            key = item.key.toString(),
                             judul = item.child("judul").value.toString(),
                             bahan = bahan,
                             cara = item.child("cara").value.toString(),
@@ -55,6 +56,8 @@ class List(context: Context) : Fragment(R.layout.fragment_list) {
                 val layout: RecyclerView.LayoutManager = LinearLayoutManager(context)
                 main_recycler.layoutManager = layout
                 main_recycler.adapter = adapter
+
+
 
                 println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<${allReceipe.size} >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 

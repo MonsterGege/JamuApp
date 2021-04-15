@@ -7,21 +7,22 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/click"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingHorizontal="18dp"
+        android:clickable="true"
+        android:onClick="onClick"
         android:paddingBottom="16dp">
-
         <ImageView
             android:id="@+id/item_image"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/size_35"
-            android:background="@drawable/rounded"
+            android:layout_marginTop="25px"
+            android:background="@color/dark_grey"
             android:scaleType="centerCrop" />
-
         <TextView
             android:id="@+id/item_judul"
             android:layout_width="match_parent"

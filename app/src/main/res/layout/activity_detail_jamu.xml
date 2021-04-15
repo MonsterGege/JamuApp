@@ -13,14 +13,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.asura.library.views.PosterSlider
-            android:id="@+id/detail_slider"
+        <VideoView
+            android:id="@+id/detail_video"
             android:layout_width="fill_parent"
             android:layout_height="400dp"
-            app:defaultIndicator="circle"
             app:layout_constraintTop_toTopOf="parent"
-            app:hideIndicators="true"
-            app:loopSlides="true"
             android:layout_marginTop="-60dp"
             android:scaleType="centerCrop"
             android:layout_gravity="center"
@@ -53,54 +50,74 @@
                     android:layout_marginBottom="4dp"
                     android:text="NamaJamu"
                     android:textColor="@color/dark_grey"
-                    android:textSize="18dp"
+                    android:textSize="@dimen/text_32"
                     android:textStyle="bold"/>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_16"
+                    android:textColor="@color/dark_grey"
+                    android:layout_marginTop="4px"
+                    android:layout_marginBottom="4px"
+                    android:text="Deskripsi :"/>
                 <TextView
                     android:id="@+id/detail_keterangan"
                     android:textSize="@dimen/size_12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Keterangan Jamu"
-                    android:inputType="textImeMultiLine"
                     android:layout_marginBottom="6dp"
                     android:textColor="#808080"/>
-
-                <com.google.android.material.tabs.TabLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="0"
-                    android:layout_marginTop="20dp"
-                    app:tabIndicatorColor="#808080"
-                    app:tabIndicatorHeight="3dp"
-                    app:tabIndicatorFullWidth="false"
-                    app:tabIndicator="@drawable/tab_indicator"
-                    app:tabIndicatorAnimationMode="elastic"
-                    app:tabSelectedTextColor="#808080"
-                    app:tabTextAppearance="@style/MyCustomTextAppearance"
-                    >
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ingredients" />
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Preparations" />
-
-                </com.google.android.material.tabs.TabLayout>
-
                 <TextView
-                    android:id="@+id/detail_buat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tulis cara pembuatan di sini ya.."
-                    android:layout_marginVertical="12dp"
-                    android:lineSpacingExtra="5dp"
+                    android:textSize="@dimen/text_16"
+                    android:textColor="@color/dark_grey"
+                    android:layout_marginTop="4px"
+                    android:layout_marginBottom="4px"
+                    android:text="Khasiat :"/>
+                <TextView
+                    android:id="@+id/detail_khasiat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_12"
+                    android:textColor="@color/dark_grey"
+                    android:layout_marginBottom="6dp"
+                    android:text="Khasiat Jamu"
                     />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_16"
+                    android:textColor="@color/dark_grey"
+                    android:layout_marginTop="4px"
+                    android:layout_marginBottom="4px"
+                    android:text="Bahan :"/>
 
+                <TextView
+                    android:id="@+id/detail_bahan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_12"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="@color/dark_grey"
+                    android:text="Bahan"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_16"
+                    android:textColor="@color/dark_grey"
+                    android:layout_marginTop="4px"
+                    android:layout_marginBottom="4px"
+                    android:text="Cara Membuat :"/>
+                <TextView
+                    android:id="@+id/detail_cara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_12"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="@color/dark_grey"
+                    android:text="Cara Membuat"/>
             </LinearLayout>
 
 
