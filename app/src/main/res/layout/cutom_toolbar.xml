@@ -30,6 +30,7 @@
             android:closeIcon="@drawable/ic_close_white"
             android:layout_marginHorizontal="@dimen/size_5"/>
         <ImageView
+            android:id="@+id/main_notif"
             android:layout_width="@dimen/size_20"
             android:layout_height="@dimen/size_20"
             android:layout_margin="@dimen/size_5"

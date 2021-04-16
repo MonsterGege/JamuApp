@@ -3,26 +3,37 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp">
+    android:background="@drawable/round_white"
+    android:elevation="@dimen/size_6"
+    android:layout_margin="@dimen/size_12">
     <LinearLayout
+        android:id="@+id/click_notif"
+        android:onClick="onClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/size_35"
-        android:paddingLeft="@dimen/size_12"
-        android:padding="@dimen/size_35"
-
+        android:padding="@dimen/size_18"
         android:orientation="vertical">
         <TextView
             android:id="@+id/notiftitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/text_32"
+            android:textSize="@dimen/text_24"
+            android:textColor="@color/dark_grey"
+            android:textStyle="italic"
             android:text="Title"/>
         <TextView
             android:id="@+id/notifcontent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_16"
+            android:textColor="@color/dark_grey"
             android:text="Content"/>
     </LinearLayout>
+    <ImageView
+        android:id="@+id/trash"
+        android:layout_width="@dimen/size_35"
+        android:layout_height="@dimen/size_35"
+        android:layout_margin="@dimen/size_12"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_dark_trash"/>
 </RelativeLayout>
