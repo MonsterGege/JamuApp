@@ -34,49 +34,49 @@ class Category : Fragment() {
         jahe.setOnClickListener {
             val data = "jahe"
             val intent = Intent(requireContext(),DetailKategori::class.java)
-            intent.putExtra(DetailKategori.EXTRA_DATA,data)
+            intent.putExtra("extra_data",data)
             startActivity(intent)
         }
         kunyit.setOnClickListener {
             val data = "kunyit"
             val intent = Intent(requireContext(),DetailKategori::class.java)
-            intent.putExtra(DetailKategori.EXTRA_DATA,data)
+            intent.putExtra("extra_data",data)
             startActivity(intent)
         }
         kencur.setOnClickListener {
             val data = "kencur"
             val intent = Intent(requireContext(),DetailKategori::class.java)
-            intent.putExtra(DetailKategori.EXTRA_DATA,data)
+            intent.putExtra("extra_data",data)
             startActivity(intent)
         }
         temulawak.setOnClickListener {
             val data = "Temulawak"
             val intent = Intent(requireContext(),DetailKategori::class.java)
-            intent.putExtra(DetailKategori.EXTRA_DATA,data)
+            intent.putExtra("extra_data",data)
             startActivity(intent)
         }
         masukangin.setOnClickListener {
             val data = "Masuk angin"
             val intent = Intent(requireContext(),DetailKategori::class.java)
-            intent.putExtra(DetailKategori.EXTRA_DATA,data)
+            intent.putExtra("extra_data",data)
             startActivity(intent)
         }
         pegal.setOnClickListener {
             val data = "Pegal-pegal"
             val intent = Intent(requireContext(),DetailKategori::class.java)
-            intent.putExtra(DetailKategori.EXTRA_DATA,data)
+            intent.putExtra("extra_data",data)
             startActivity(intent)
         }
         stamina.setOnClickListener {
             val data = "Stamina"
             val intent = Intent(requireContext(),DetailKategori::class.java)
-            intent.putExtra(DetailKategori.EXTRA_DATA,data)
+            intent.putExtra("extra_data",data)
             startActivity(intent)
         }
         dayatahan.setOnClickListener {
             val data = "Daya tahan tubuh"
             val intent = Intent(requireContext(),DetailKategori::class.java)
-            intent.putExtra(DetailKategori.EXTRA_DATA,data)
+            intent.putExtra("extra_data",data)
             startActivity(intent)
         }
 

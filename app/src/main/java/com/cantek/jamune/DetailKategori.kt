@@ -18,9 +18,7 @@ import kotlinx.android.synthetic.main.fragment_list.*
 
 class DetailKategori : AppCompatActivity() {
 
-    companion object{
-        const val EXTRA_DATA = ""
-    }
+
     private lateinit var rvJamu : RecyclerView
 
 
@@ -32,7 +30,7 @@ class DetailKategori : AppCompatActivity() {
             onBackPressed()
         }
         rvJamu = findViewById(R.id.recycler)
-        val get = intent.getStringExtra(EXTRA_DATA)?.toLowerCase()
+        val get = intent.getStringExtra("extra_data")?.toLowerCase()
         //supportActionBar?.title=get
 
 
