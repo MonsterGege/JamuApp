@@ -4,13 +4,14 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/ic_icon_app"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:largeHeap="true"
-        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
         android:theme="@style/splashScreenCustom">
-        <activity android:name=".DetailKategori"></activity>
+        <activity android:name=".Search"></activity>
+        <activity android:name=".DetailKategori" />
         <activity android:name=".Notifications" />
         <activity android:name=".DetailJamu" />
         <activity android:name=".MainActivity">
