@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/size_250"
+    android:padding="@dimen/size_8"
+    android:background="@drawable/round_white"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_100"
+        android:layout_gravity="center"
+        android:src="@drawable/nottt"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_grey"
+        android:textAlignment="center"
+        android:padding="@dimen/size_6"
+        android:textSize="@dimen/text_16"
+        android:text="Opps, something wrong!\nCheck yout connection!!"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/main_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_16"
+            android:layout_margin="@dimen/size_8"
+            android:background="@color/snow_mint"
+            android:textColor="@color/dark_grey"
+            android:text="Ok"/>
+    </LinearLayout>
+</LinearLayout>

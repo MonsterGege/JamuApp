@@ -27,7 +27,6 @@ class Notifications : AppCompatActivity() {
         setContentView(R.layout.activity_notifications)
 
         val myRef: DatabaseReference = FirebaseDatabase.getInstance("https://jamune-67b20-default-rtdb.firebaseio.com/").getReference("notif")
-        notificationChannel()
 
         findViewById<ImageView>(R.id.notif_back).setOnClickListener {
             onBackPressed()
@@ -74,18 +73,6 @@ class Notifications : AppCompatActivity() {
 
     }
 
-    private fun notificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = "Notification title"
-            val desc = "norification description"
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
-            val channel: NotificationChannel = NotificationChannel("new", name, importance).apply {
-                description = desc
-            }
-            val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-            notificationManager.createNotificationChannel(channel)
-        }
-    }
 
     private fun sendNotification(title: String, desc: String) {
         val intent = Intent(this, Notifications::class.java).apply {

@@ -1,8 +1,14 @@
 package com.cantek.jamune
 
+import android.app.Dialog
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +21,8 @@ import kotlinx.android.synthetic.main.fragment_list.*
 
 
 class List(context: Context) : Fragment(R.layout.fragment_list) {
+
+    private lateinit var dialogConn: Dialog
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -59,15 +67,25 @@ class List(context: Context) : Fragment(R.layout.fragment_list) {
                 main_recycler.adapter = adapter
 
 
-
-                println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<${allReceipe.size} >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-
             }
 
             override fun onCancelled(error: DatabaseError) {
                 // Failed to read value
                 println("Guagall")
+                failedConn()
             }
         })
+    }
+
+    private fun failedConn() {
+        dialogConn.setContentView(R.layout.cutom_dialog_notconnection)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dialogConn.window!!.setBackgroundDrawable(context!!.getDrawable(R.drawable.round_white))
+        }
+        dialogConn.window!!.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        val dialogCancel: Button = dialogConn.findViewById(R.id.main_cancel)
+        dialogCancel.setOnClickListener{
+            dialogConn.dismiss()
+        }
     }
 }

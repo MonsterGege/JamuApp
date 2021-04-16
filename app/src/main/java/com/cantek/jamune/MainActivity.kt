@@ -1,7 +1,12 @@
 package com.cantek.jamune
 
 import android.app.Activity
+import android.app.Dialog
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.SearchView
@@ -12,6 +17,8 @@ import com.cantek.jamune.adapter.PageAdapter
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var dialogConnection: Dialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_Jamune)
@@ -23,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, Notifications::class.java))
         }
 
+        notificationChannel()
 
         search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -41,4 +49,18 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = PageAdapter(this, supportFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
     }
+
+    private fun notificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "Notification title"
+            val desc = "norification description"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel: NotificationChannel = NotificationChannel("new", name, importance).apply {
+                description = desc
+            }
+            val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
 }
