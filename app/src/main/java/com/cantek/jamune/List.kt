@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.cantek.jamune.adapter.CategoryAdapter
 import com.cantek.jamune.adapter.ReceipeMainAdapter
 import com.cantek.jamune.model.Receipe
 import com.google.firebase.database.*
@@ -52,7 +53,7 @@ class List(context: Context) : Fragment(R.layout.fragment_list) {
                     }
                 }
 
-                val adapter = context?.let { ReceipeMainAdapter(it, allReceipe) }
+                val adapter = context?.let { CategoryAdapter(it, allReceipe) }
                 val layout: RecyclerView.LayoutManager = LinearLayoutManager(context)
                 main_recycler.layoutManager = layout
                 main_recycler.adapter = adapter

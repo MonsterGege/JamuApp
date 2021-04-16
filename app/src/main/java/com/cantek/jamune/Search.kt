@@ -18,11 +18,12 @@ class Search : AppCompatActivity() {
         setContentView(R.layout.activity_search)
 
         rvSearch = findViewById(R.id.recyclersearch)
-        val query = intent.getStringExtra("key-query")
+        val queryy = intent.getStringExtra("key-query")
         val hasil : TextView = findViewById(R.id.hasil)
         val empty : TextView = findViewById(R.id.tidakada)
         empty.text = ""
-        hasil.text = query
+        hasil.text = queryy
+        val query = queryy?.toLowerCase()
 
         val SearchRecipe: MutableList<Receipe> = mutableListOf()
         val ref: DatabaseReference = FirebaseDatabase.getInstance("https://jamune-67b20-default-rtdb.firebaseio.com/").getReference("resep")
@@ -33,13 +34,13 @@ class Search : AppCompatActivity() {
                     for (item in data.children){
                         val khasiat: MutableList<String> = mutableListOf()
                         for (i in item.child("kasiat").children){
-                            khasiat.add(i.value.toString())
+                            khasiat.add(i.value.toString().toLowerCase())
                         }
                         val bahan: MutableList<String> = mutableListOf()
                         for (i in item.child("bahan").children) {
-                            bahan.add(i.value.toString())
+                            bahan.add(i.value.toString().toLowerCase())
                         }
-                        if (query in bahan || query in khasiat || query == item.child("judul").value.toString()  ) {
+                        if (query in bahan || query in khasiat || query == item.child("judul").value.toString().toLowerCase() ) {
                             SearchRecipe.add(
                                 Receipe(
                                     key = item.key.toString(),

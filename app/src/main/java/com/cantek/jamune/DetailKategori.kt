@@ -28,7 +28,7 @@ class DetailKategori : AppCompatActivity() {
 
 
         rvJamu = findViewById(R.id.recycler)
-        val get = intent.getStringExtra(EXTRA_DATA)
+        val get = intent.getStringExtra(EXTRA_DATA)?.toLowerCase()
         //supportActionBar?.title=get
 
 
@@ -41,11 +41,11 @@ class DetailKategori : AppCompatActivity() {
                     for (item in data.children){
                         val khasiat: MutableList<String> = mutableListOf()
                         for (i in item.child("kasiat").children){
-                            khasiat.add(i.value.toString())
+                            khasiat.add(i.value.toString().toLowerCase())
                         }
                         val bahan: MutableList<String> = mutableListOf()
                         for (i in item.child("bahan").children) {
-                            bahan.add(i.value.toString())
+                            bahan.add(i.value.toString().toLowerCase())
                         }
                         if (get in bahan || get in khasiat) {
                             CatRecipe.add(
