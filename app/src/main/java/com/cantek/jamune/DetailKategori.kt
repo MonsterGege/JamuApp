@@ -1,9 +1,11 @@
 package com.cantek.jamune
 
 import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,7 +28,9 @@ class DetailKategori : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_kategori)
 
-
+        findViewById<ImageView>(R.id.cat_back).setOnClickListener {
+            onBackPressed()
+        }
         rvJamu = findViewById(R.id.recycler)
         val get = intent.getStringExtra(EXTRA_DATA)?.toLowerCase()
         //supportActionBar?.title=get
