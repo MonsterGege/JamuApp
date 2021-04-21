@@ -58,6 +58,7 @@ class DetailJamu : AppCompatActivity() {
 
 
 
+
                 println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<${allReceipe.size} >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
             }

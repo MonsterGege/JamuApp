@@ -41,7 +41,6 @@ class CategoryAdapter(context: Context,private val recipe: List<Receipe>): Recyc
         var keterangan = view.item_keterangan
         var click = view.click
         fun bindrecipe(contex: Context, recipes: Receipe) {
-
             Glide.with(contex).load(recipes.image).into(img)
             jdl.text = recipes.judul
             keterangan.text = recipes.deskripsi

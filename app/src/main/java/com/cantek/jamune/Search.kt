@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cantek.jamune.adapter.CategoryAdapter
 import com.cantek.jamune.model.Receipe
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_detail_jamu.*
 
 class Search : AppCompatActivity() {
 
@@ -56,6 +57,7 @@ class Search : AppCompatActivity() {
                         }
 
                     }
+
 
                     rvSearch.layoutManager = LinearLayoutManager(this@Search)
                     val categoryAdapter = CategoryAdapter(this@Search,SearchRecipe)
